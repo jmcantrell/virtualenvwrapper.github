@@ -30,6 +30,7 @@ def template(args):
     project = args[0]
     url = get_url(project)
     if url:
+        call('git', 'init')
         call('git', 'remote', 'add', 'origin', url)
         call('git', 'config', 'branch.master.remote', 'origin')
         call('git', 'config', 'branch.master.merge', 'refs/heads/master')
