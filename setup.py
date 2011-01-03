@@ -1,9 +1,9 @@
 #!/usr/bin/env python
 
-from setuptools import setup, find_packages
+from setuptools import setup
 
 PROJECT = 'virtualenvwrapper.github'
-VERSION = '0.1'
+VERSION = '0.1.1'
 
 setup(
         name=PROJECT,
@@ -25,18 +25,22 @@ setup(
             'Environment :: Console',
             ],
 
-        platforms=('Any',),
+        platforms=[
+            'Any',
+            ],
 
-        namespace_packages = ['virtualenvwrapper'],
+        namespace_packages=[
+            'virtualenvwrapper',
+            ],
 
-        packages = find_packages(),
+        packages=[
+            'virtualenvwrapper',
+            ],
 
-        requires=[
+        install_requires=[
             'virtualenv',
-            'virtualenvwrapper (>=2.0)',
-            'virtualenvwrapper.project (>=1.0)',
-            'github2',
-            'gitpython',
+            'virtualenvwrapper',
+            'virtualenvwrapper.project',
             ],
 
         entry_points={
