@@ -11,6 +11,9 @@ def run(*args):
     p.wait()
     return p
 
+def call(*args):
+    subprocess.call(args, shell=False)
+
 def get_url(project):
     p = run('git', 'config', '--global', 'github.user')
     try:
@@ -27,6 +30,7 @@ def template(args):
     project = args[0]
     url = get_url(project)
     if url:
-        log.info('Cloning %s', url)
-        subprocess.call(['git', 'clone', url, 'src'], shell=False)
-    return
+        call('git', 'remote', 'add', 'origin', url)
+        call('git', 'config', 'branch.master.remote', 'origin')
+        call('git', 'config', 'branch.master.merge', 'refs/heads/master')
+        log.info('Repo setup to track %s' % url)
