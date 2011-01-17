@@ -3,7 +3,7 @@
 from setuptools import setup
 
 PROJECT = 'virtualenvwrapper.github'
-VERSION = '0.1.2'
+VERSION = '0.1.3'
 
 setup(
         name=PROJECT,
