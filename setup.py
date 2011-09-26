@@ -39,8 +39,7 @@ setup(
 
         install_requires=[
             'virtualenv',
-            'virtualenvwrapper',
-            'virtualenvwrapper.project',
+            'virtualenvwrapper>=2.9',
             ],
 
         entry_points={
