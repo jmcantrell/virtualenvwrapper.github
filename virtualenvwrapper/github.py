@@ -1,18 +1,17 @@
-import logging
-import os
-import subprocess
-
-import pkg_resources
+import logging, os, subprocess
 
 log = logging.getLogger(__name__)
+
 
 def run(*args):
     p = subprocess.Popen(args, stdout=subprocess.PIPE)
     p.wait()
     return p
 
+
 def call(*args):
     subprocess.call(args, shell=False)
+
 
 def get_url(project):
     p = run('git', 'config', '--global', 'github.user')
@@ -25,6 +24,7 @@ def get_url(project):
         return None
     url = 'git@github.com:{user}/{project}.git'.format(user=user, project=project)
     return url
+
 
 def template(args):
     project = args[0]

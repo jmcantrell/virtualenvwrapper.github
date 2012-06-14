@@ -14,7 +14,7 @@ setup(
         author='Jeremy Cantrell',
         author_email='jmcantrell@gmail.com',
 
-        url = 'http://github.com/jmcantrell/%s/' % PROJECT,
+        url='http://github.com/jmcantrell/%s/' % PROJECT,
         download_url='http://github.com/jmcantrell/%s/tarball/%s' % (PROJECT, VERSION),
 
         classifiers=[
