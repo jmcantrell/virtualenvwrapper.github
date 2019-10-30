@@ -6,47 +6,49 @@ PROJECT = 'virtualenvwrapper.github'
 VERSION = '0.1.3'
 
 setup(
-        name=PROJECT,
-        version=VERSION,
 
-        description='Plugin for virtualenvwrapper to automatically create projects based on github repositories.',
+    name=PROJECT,
+    version=VERSION,
 
-        author='Jeremy Cantrell',
-        author_email='jmcantrell@gmail.com',
+    description='Plugin for virtualenvwrapper to automatically create projects based on github repositories.',
 
-        url='http://github.com/jmcantrell/%s/' % PROJECT,
-        download_url='http://github.com/jmcantrell/%s/tarball/%s' % (PROJECT, VERSION),
+    author='Jeremy Cantrell',
+    author_email='jmcantrell@gmail.com',
 
-        classifiers=[
-            'Development Status :: 4 - Beta',
-            'License :: OSI Approved :: BSD License',
-            'Programming Language :: Python',
-            'Intended Audience :: Developers',
-            'Environment :: Console',
-            ],
+    url='http://github.com/jmcantrell/%s/' % PROJECT,
+    download_url='http://github.com/jmcantrell/%s/tarball/%s' % (PROJECT, VERSION),
 
-        platforms=[
-            'Any',
-            ],
+    classifiers=[
+        'Development Status :: 4 - Beta',
+        'License :: Public Domain',
+        'Programming Language :: Python',
+        'Intended Audience :: Developers',
+        'Environment :: Console',
+    ],
 
-        namespace_packages=[
-            'virtualenvwrapper',
-            ],
+    platforms=[
+        'Any',
+    ],
 
-        packages=[
-            'virtualenvwrapper',
-            ],
+    namespace_packages=[
+        'virtualenvwrapper',
+    ],
 
-        install_requires=[
-            'virtualenv',
-            'virtualenvwrapper>=2.9',
-            ],
+    packages=[
+        'virtualenvwrapper',
+    ],
 
-        entry_points={
-            'virtualenvwrapper.project.template': [
-                'github = virtualenvwrapper.github:template',
-                ]
-            },
+    install_requires=[
+        'virtualenv',
+        'virtualenvwrapper>=2.9',
+    ],
 
-        zip_safe=False,
-        )
+    entry_points={
+        'virtualenvwrapper.project.template': [
+            'github = virtualenvwrapper.github:template',
+        ]
+    },
+
+    zip_safe=False,
+
+)
